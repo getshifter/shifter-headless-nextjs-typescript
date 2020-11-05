@@ -1,0 +1,15 @@
+exampleNextJSApplication:
+  component: "@sls-next/serverless-component@1.18.0" 
+  inputs:
+    publicDirectoryCache:
+      value: public, max-age=604800
+      test: /\.(gif|jpe?g|png|txt|xml)$/i
+    cloudfront:
+      defaults:
+        forward:
+          headers:
+            [
+              CloudFront-Is-Desktop-Viewer,
+              CloudFront-Is-Mobile-Viewer,
+              CloudFront-Is-Tablet-Viewer,
+            ]

@@ -4,12 +4,16 @@
 ## Getting Started
 
 ```bash
-$ npx create-next-app YOUR_APP_NAME --example "https://github.com/wpkyoto/nextjs-starter-typescript/tree/main"
+$ npx create-next-app YOUR_APP_NAME --example "https://github.com/getshifter/headless-example-nextjs-typescript/tree/main"
 $ cd YOUR_APP_NAME
 
-$ vim .envrc
-export WORDPRESS_URL=https://src.wordpress-develop.dev/wp-json
-$ direnv allow
+$ vim next.config.js
+const settings = {
+    env: {
+        WORDPRESS_URL: 'https://<<REPLAE_TO_YOUR_DOMAIN>>/wp-json'
+    }
+}
+
 
 $ npm run dev
 # or
@@ -26,9 +30,11 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 ```bash
 $ yarn export (or npm run export)
-$ npx serve build
+$ npx serve public
 ```
 
 ### Serverless hosting with AWS
 
-WIP
+```bash
+$ yarn deploy-aws
+```
