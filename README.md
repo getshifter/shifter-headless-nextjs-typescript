@@ -1,4 +1,4 @@
-## Next.js Starter (TypeScro@t)
+## Next.js Starter (TypeScript)
 
 
 ## Getting Started
