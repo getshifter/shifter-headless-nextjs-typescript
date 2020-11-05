@@ -6,6 +6,7 @@ import { fetch } from '../libs/polyfil/fetch'
 import { WPPost } from '../libs/wpapi/interfaces'
 import { WPAPIURLFactory } from '../libs/wpapi/UrlBuilder'
 import { PostArchives } from '../components/archives/Posts';
+import { Divider, PageHeader } from 'antd'
 
 const urlBuilder = WPAPIURLFactory.init(
   process.env.WORDPRESS_URL,
@@ -22,7 +23,8 @@ export const Home:FC<{
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Recent posts</h1>
+      <PageHeader title="Recent Post" />
+      <Divider />
       <PostArchives posts={posts} />
     </div>
   )
