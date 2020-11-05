@@ -4,6 +4,7 @@ import NextNprogress from 'nextjs-progressbar'
 import Link from 'next/link'
 import {BackTop, Layout, Menu} from 'antd'
 import 'antd/dist/antd.css'
+import '../styles/main.css'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (

@@ -1,4 +1,4 @@
-## Next.js Starter (TypeScript)
+## Next.js WordPress example (TypeScript)
 
 
 ## Getting Started
@@ -6,6 +6,10 @@
 ```bash
 $ npx create-next-app YOUR_APP_NAME --example "https://github.com/wpkyoto/nextjs-starter-typescript/tree/main"
 $ cd YOUR_APP_NAME
+
+$ vim .envrc
+export WORDPRESS_URL=https://src.wordpress-develop.dev/wp-json
+$ direnv allow
 
 $ npm run dev
 # or
