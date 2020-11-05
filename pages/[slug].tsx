@@ -20,24 +20,26 @@ export const uniqWPPosts = (posts: WPPost[]): WPPost[] => {
 }
 
 export const listAllPosts = async (APIURLBuilder: WPAPIURLBuilder, posts: WPPost[] = []): Promise<WPPost[]> => {
+    const perPage = 20
     try {
-    const response = await fetch(APIURLBuilder.getURL())
-    if (
-        response instanceof Error ||
-        (
-            response.data &&
-            response.data.status &&
-            response.data.status > 399
-        )
-        ) {
-        throw response
-    }
-    const mergedPosts = uniqWPPosts([...posts,...response])
-    if (canUseServerSideFeatures()) {
-        return mergedPosts
-    }
-    APIURLBuilder.nextPage()
-    return listAllPosts(APIURLBuilder, mergedPosts)
+        const url = APIURLBuilder.perPage(20).getURL()
+        const response = await fetch(url)
+        if (
+            response instanceof Error ||
+            (
+                response.data &&
+                response.data.status &&
+                response.data.status > 399
+            )
+            ) {
+            throw response
+        }
+        const mergedPosts = uniqWPPosts([...posts,...response])
+        if (canUseServerSideFeatures() || response.length < perPage) {
+            return mergedPosts
+        }
+        APIURLBuilder.nextPage()
+        return listAllPosts(APIURLBuilder, mergedPosts)
     } catch (e) {
         if (e.code && e.code === 'rest_invalid_param') {
             return posts
