@@ -9,7 +9,7 @@ import { PostArchives } from '../components/archives/Posts';
 
 const urlBuilder = WPAPIURLFactory.init(
   process.env.WORDPRESS_URL,
-).postType('posts').startAt(1).withEmbed()
+).postType('posts').startAt(1).perPage(50).withEmbed()
 
 
 export const Home:FC<{

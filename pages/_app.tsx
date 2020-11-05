@@ -1,14 +1,21 @@
 import { FC } from 'react'
 import {AppProps} from 'next/app'
-import {Layout, Menu} from 'antd'
+import NextNprogress from 'nextjs-progressbar'
+import Link from 'next/link'
+import {BackTop, Layout, Menu} from 'antd'
 import 'antd/dist/antd.css'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <Layout className="layout">
+      <NextNprogress />
       <Layout.Header>
         <Menu theme="dark" mode="horizontal">
-          <Menu.Item>nav 1</Menu.Item>
+        <Menu.Item>
+          <Link href="/">
+            Home
+          </Link>
+          </Menu.Item>
         </Menu>
       </Layout.Header>
       <Layout.Content style={{ padding: '30px 50px 0' }}>
@@ -19,6 +26,7 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
       }}>
         <Component {...pageProps} />
         </div>
+        <BackTop />
       </Layout.Content>
       <Layout.Footer>
         ©︎ 2020 Created by digitalcube

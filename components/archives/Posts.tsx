@@ -9,12 +9,15 @@ export const ArchiveThumbnail: FC<{
 }> = ({post}) => {
     const featuredImage = getThePostFeatureImage(post, 'medium')
     return featuredImage ? (
-        <img
-          src={featuredImage.source_url}
-          alt={featuredImage.alt_text}
-          width={featuredImage.witdh}
-          height={featuredImage.height}
-        />
+        <Link href={`/${post.slug}`}>
+            <img
+            src={featuredImage.source_url}
+            alt={featuredImage.alt_text}
+            width={featuredImage.witdh}
+            height={featuredImage.height}
+            style={{cursor: 'pointer'}}
+            />
+        </Link>
       ): null
 }
 
@@ -43,10 +46,11 @@ export const PostArchiveItem = (post: WPPost): ReactNode => {
               <Avatar src={author.source_url} />
             ): null
           }
-          title={<Link href="/">
+          title={<Link href={`/${post.slug}`}>
             <span
               style={{
-                fontSize: "1.5rem"
+                fontSize: "1.5rem",
+                cursor: 'pointer'
               }}
               dangerouslySetInnerHTML={{
                 __html: post.title.rendered

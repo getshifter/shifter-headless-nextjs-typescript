@@ -3,6 +3,7 @@ export interface WPAPIURLBuilder {
     path(path: string): this
     postType(postType: 'posts' | 'pages'): this
     startAt(startAt: number): this
+    nextPage(): this
     withEmbed(): this
     perPage(perPage:number): this
     search(search: string): this
@@ -41,6 +42,10 @@ export class WPAPIURLFactory {
             },
             startAt(startAt: number) {
                 api.queryString.startAt = startAt
+                return this
+            },
+            nextPage() {
+                api.queryString.startAt = api.queryString.startAt + 1
                 return this
             },
             withEmbed() {
