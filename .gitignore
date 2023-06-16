@@ -35,3 +35,7 @@ yarn-error.log*
 .envrc
 .serverless
 .serverless_nextjs/
+
+# env
+.env
+!.env.example
