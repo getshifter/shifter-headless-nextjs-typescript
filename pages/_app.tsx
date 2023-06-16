@@ -1,49 +1,38 @@
-import { FC } from 'react'
-import {AppProps} from 'next/app'
-import NextNprogress from 'nextjs-progressbar'
-import Link from 'next/link'
-import {BackTop, Layout, Menu} from 'antd'
-// import 'antd/dist';
-import '../styles/main.css'
+import { FC } from "react";
+import { AppProps } from "next/app";
+import NextNprogress from "nextjs-progressbar";
+import Link from "next/link";
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <Layout className="layout">
+    <div>
       <NextNprogress />
-      <Layout.Header>
-        <Menu theme="dark" mode="horizontal">
-          <Menu.Item>
-            <Link href="/">
-              Home
-            </Link>
-          </Menu.Item>
-          <Menu.Item>
-            <Link href="/licenses">
-              Licenses
-            </Link>
-          </Menu.Item>
-          <Menu.Item>
-            <a href="https://github.com/getshifter/headless-example-nextjs-typescript" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          </Menu.Item>
-        </Menu>
-      </Layout.Header>
-      <Layout.Content style={{ padding: '30px 50px 0' }}>
-      <div style={{
-        minHeight: '280px',
-        background: '#fff',
-        padding: '24px',
-      }}>
-        <Component {...pageProps} />
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link
+                href="https://github.com/getshifter/headless-example-nextjs-typescript"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div>
+        <div>
+          <Component {...pageProps} />
         </div>
-        <BackTop />
-      </Layout.Content>
-      <Layout.Footer>
-        ©︎ 2020 Created by digitalcube
-      </Layout.Footer>
-    </Layout>
-  )
-}
+      </div>
+      <footer>©︎ 2020 Created by digitalcube</footer>
+    </div>
+  );
+};
 
-export default MyApp
+export default MyApp;
