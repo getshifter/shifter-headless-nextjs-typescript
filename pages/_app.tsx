@@ -30,7 +30,7 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
           <Component {...pageProps} />
         </div>
       </div>
-      <footer>©︎ 2020 Created by digitalcube</footer>
+      <footer>©︎ {new Date().getFullYear()} Created by DigitalCube</footer>
     </div>
   );
 };
