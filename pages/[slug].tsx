@@ -4,7 +4,6 @@ import { WPPost } from "../libs/wpapi/interfaces";
 import { WPAPIURLBuilder, WPAPIURLFactory } from "../libs/wpapi/UrlBuilder";
 import { fetch } from "../libs/polyfil/fetch";
 import { canUseServerSideFeatures } from "../libs/next.env";
-import { Descriptions, Divider } from "antd";
 import {
   formatPostDateToString,
   getThePostAuthor,
@@ -81,25 +80,20 @@ export const SinglePost: FC<{
       ) : null}
       <>
         <h1>{post.title.rendered}</h1>
-        <Descriptions>
-          <Descriptions.Item label="Created">
-            {formatPostDateToString(post)}
-          </Descriptions.Item>
-          {author ? (
-            <Descriptions.Item label="Author">{author.name}</Descriptions.Item>
-          ) : null}
+        <div>
+          <div aria-label="Created">{formatPostDateToString(post)}</div>
+          {author ? <div aria-label="Author">{author.name}</div> : null}
           {termItems ? (
-            <Descriptions.Item label="Taxonomies">
+            <div aria-label="Taxonomies">
               {termItems.map((item) => (
                 <span key={item.id} style={{ marginRight: "5px" }}>
                   {item.name}
                 </span>
               ))}
-            </Descriptions.Item>
+            </div>
           ) : null}
-        </Descriptions>
+        </div>
       </>
-      <Divider />
       <div
         dangerouslySetInnerHTML={{
           __html: post.content.rendered,
