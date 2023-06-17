@@ -14,10 +14,7 @@ const settings = {
     }
 }
 
-
 $ npm run dev
-# or
-$ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -29,12 +26,12 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 ### Static Export
 
 ```bash
-$ yarn export (or npm run export)
+$ npm run export
 $ npx serve public
 ```
 
 ### Serverless hosting with AWS
 
 ```bash
-$ yarn deploy-aws
+$ npm run deploy-aws
 ```
