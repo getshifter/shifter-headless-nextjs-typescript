@@ -131,7 +131,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const post = await fetch(urlBuilder.slug(slug).getURL());
   return {
     props: {
-      post: post[0],
+      post: post[0] || null,
     },
   };
 };
