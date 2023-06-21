@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, useMemo } from "react";
-import { WPPost } from "../../libs/wpapi/interfaces";
+import { WPPost } from "../libs/wpapi/interfaces";
 
 const renderPost = (post: WPPost) => {
   return (

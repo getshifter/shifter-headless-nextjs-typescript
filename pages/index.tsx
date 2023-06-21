@@ -4,7 +4,7 @@ import { FC } from "react";
 import { fetch } from "../libs/polyfill/fetch";
 import { WPPost } from "../libs/wpapi/interfaces";
 import { WPAPIURLFactory } from "../libs/wpapi/UrlBuilder";
-import { PostArchives } from "../components/archives/Posts";
+import { PostArchives } from "../components/archive";
 
 const urlBuilder = WPAPIURLFactory.init(process.env.WORDPRESS_URL)
   .postType("posts")
