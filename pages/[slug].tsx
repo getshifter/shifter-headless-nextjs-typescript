@@ -2,7 +2,7 @@ import React, { FC, useMemo } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { WPPost } from "../libs/wpapi/interfaces";
 import { WPAPIURLBuilder, WPAPIURLFactory } from "../libs/wpapi/UrlBuilder";
-import { fetch } from "../libs/polyfil/fetch";
+import { fetch } from "../libs/polyfill/fetch";
 import { canUseServerSideFeatures } from "../libs/next.env";
 import {
   formatPostDateToString,
