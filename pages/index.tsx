@@ -4,7 +4,7 @@ import { FC } from "react";
 import { fetch } from "../libs/polyfill/fetch";
 import { WPPost } from "../libs/wpapi/interfaces";
 import { WPAPIURLFactory } from "../libs/wpapi/UrlBuilder";
-import { PostArchives } from "../components/archive";
+import { Archives } from "../components/archives";
 
 const urlBuilder = WPAPIURLFactory.init(process.env.WORDPRESS_URL)
   .postType("posts")
@@ -21,7 +21,7 @@ export const Home: FC<{
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PostArchives posts={posts} />
+      <Archives posts={posts} />
     </div>
   );
 };
