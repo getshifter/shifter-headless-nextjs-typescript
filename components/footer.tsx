@@ -108,7 +108,8 @@ const Footer: FC = () => {
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-500 dark:text-gray-300">
-          &copy; 2020 Your Company, Inc. All rights reserved.
+          &copy; {new Date().getFullYear()} Created by{" "}
+          <Link href="https://digitalcube.jp">DigitalCube</Link>
         </p>
       </div>
     </footer>
