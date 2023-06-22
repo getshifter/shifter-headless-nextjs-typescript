@@ -68,6 +68,29 @@ Shifter Headless Next JS スターターテンプレートは、Next.js のウ�
 
 これらのコマンドは、Shifter Headless Next JS スターターテンプレートをベースにして、Next.js のウェブサイトやアプリケーションの開発とデプロイメントのライフサイクルを管理するための便利な方法
 
+## Netlifyへのデプロイ
+
+Shifter Headless Next JS スターターテンプレートをNetlifyにデプロイする手順は以下の通りです：
+
+1. Netlifyサイトのビルド設定を構成します：
+   - ビルドコマンド： `npm run build`
+   - 公開ディレクトリ： `out`
+
+2. 環境変数を設定します：
+   - Netlifyサイトの設定の「Advanced build settings」セクションで、「New variable」をクリックして新しい環境変数を追加します。
+   - 変数名： `NETLIFY_NEXT_PLUGIN_SKIP`
+   - 変数値： `false`
+
+   この環境変数は、ビルドプロセス中にNetlify Next.jsプラグインがスキップされないようにします。
+
+   - 再度「New variable」をクリックして、別の環境変数を追加します。
+   - 変数名： `WORDPRESS_URL`
+   - 変数値： `<your-wordpress-site-api-url>`
+
+     `<your-wordpress-site-api-url>`を、ヘッドレスWordPressサイトのAPIエンドポイントのURLに置き換えてください。この変数により、Next.jsアプリケーションが正しいWordPress APIに接続できます。
+
+これらのビルド設定と環境変数を構成することで、Shifter Headless Next JS スターターテンプレートをNetlifyにデプロイし、WordPressバックエンドとの正しい統合を確保できます。
+
 ## 貢献する
 
 貢献は歓迎します！問題に遭遇した場合や改善の提案がある場合は、GitHub リポジトリで問題をオープンしたり、プルリクエストを提出したりしてください。

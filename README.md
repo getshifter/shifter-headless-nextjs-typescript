@@ -73,6 +73,29 @@ Feel free to use and modify these commands to fit your specific requirements. Th
 
 Please note that the `npm` commands mentioned above can be replaced with `yarn` if you prefer using Yarn as your package manager.
 
+## Deploying to Netlify
+
+To deploy the Shifter Headless Next JS Starter Template to Netlify, follow these steps:
+
+1. Configure the build settings for your Netlify site:
+   - Build command: `npm run build`
+   - Publish directory: `out`
+
+2. Set up environment variables:
+   - In the "Advanced build settings" section of your Netlify site configuration, click on "New variable" to add a new environment variable.
+   - Variable name: `NETLIFY_NEXT_PLUGIN_SKIP`
+   - Variable value: `false`
+
+   This environment variable ensures that the Netlify Next.js plugin is not skipped during the build process.
+
+   - Create a "New variable" again to add another environment variable.
+   - Variable name: `WORDPRESS_URL`
+   - Variable value: `<your-wordpress-site-api-url>`
+
+     Replace `<your-wordpress-site-api-url>` with the URL of your headless WordPress site's API endpoint. This variable allows your Next.js application to connect to the correct WordPress API.
+
+By configuring these build settings and environment variables, you can deploy the Shifter Headless Next JS Starter Template to Netlify and ensure the proper integration with your WordPress backend.
+
 ## Contributing
 
 Contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
