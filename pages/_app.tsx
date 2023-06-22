@@ -11,11 +11,9 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
       <NextNprogress />
       <Header />
       <main className="min-h-screen p-6 md:p-24">
-        <div className="py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl px-2 lg:px-8">
-            <div className="mx-auto max-w-2xl lg:max-w-4xl">
-              <Component {...pageProps} />
-            </div>
+        <div className="mx-auto max-w-7xl px-2 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:max-w-4xl">
+            <Component {...pageProps} />
           </div>
         </div>
       </main>
