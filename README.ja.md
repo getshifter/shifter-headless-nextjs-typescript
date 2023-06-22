@@ -17,7 +17,7 @@
 
 Shifter Headless Next JS スターターテンプレートを使用するには、以下の手順に従ってください:
 
-1. [GitHub リポジトリ](https://github.com/getshifter/headless-example-nextjs-typescript)からテンプレートをクローンするかダウンロードします。
+1. [GitHub リポジトリ](https://github.com/getshifter/shifter-headless-nextjs-typescript)からテンプレートをクローンするかダウンロードします。
 2. `npm install` または `yarn install` を実行して依存関係をインストールします。
 3. `.env.example` ファイルを `.env` に名前を変更し、`WORDPRESS_URL` 変数を WordPress サイトの API URL に更新します。
    ```plaintext

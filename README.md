@@ -20,7 +20,7 @@ This is a starter template for building headless WordPress websites using Next.j
 
 To get started with the Shifter Headless Next JS Starter Template, follow these steps:
 
-1. Clone or download the template from the [GitHub repository](https://github.com/getshifter/headless-example-nextjs-typescript).
+1. Clone or download the template from the [GitHub repository](https://github.com/getshifter/shifter-headless-nextjs-typescript).
 2. Install the dependencies by running `npm install` or `yarn install`.
 3. Rename the `.env.example` file to `.env` and update the `WORDPRESS_URL` variable with your WordPress site's API URL.
    ```plaintext
