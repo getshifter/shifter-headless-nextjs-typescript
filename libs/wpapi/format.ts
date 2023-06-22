@@ -1,5 +1,6 @@
 import { default as dayjs } from "dayjs";
 import { WPMediaDetailSize, WPMediaDetailSizes, WPPost } from "./interfaces";
+
 export const formatPostDateToString = (
   post?: Pick<WPPost, "date">,
   format = "YYYY/MM/DD"

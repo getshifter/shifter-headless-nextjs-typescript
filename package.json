@@ -8,6 +8,8 @@
     "start": "npx serve@latest out"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
     "autoprefixer": "^10.4.14",
     "dayjs": "^1.11.8",
     "isomorphic-unfetch": "^4.0.2",
