@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FC } from "react";
-
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -24,13 +23,13 @@ const Header: FC = () => {
         <div className="flex flex-1 max-w-7xl mx-auto">
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="flex lg:hidden">

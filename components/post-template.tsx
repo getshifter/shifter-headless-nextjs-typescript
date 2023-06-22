@@ -41,7 +41,7 @@ export const PostTemplate = (post: WPPost) => {
             {formatPostDateToString(post)}
           </time>
           {termItems ? (
-            <div aria-label="Taxonomies">
+            <div aria-label="Taxonomies" className="space-x-1">
               {termItems.map((item) => (
                 <span
                   key={item.id}

@@ -10,7 +10,7 @@ interface ListProps<T> {
 
 const List = <T extends {}>({ posts, renderItem }: ListProps<T>) => {
   return posts ? (
-    <ul>
+    <ul className="space-y-6">
       {posts.map((item, i) => (
         <li key={i}>{renderItem(item)}</li>
       ))}
