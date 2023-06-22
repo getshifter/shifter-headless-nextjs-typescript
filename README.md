@@ -1,5 +1,7 @@
 # Shifter Headless Next JS Starter Template
 
+[![ja](https://img.shields.io/badge/lang-ja-red.svg)](https://github.com/getshifter/shifter-headless-nextjs-typescript/blob/main/README.ja.md)
+
 ![Shifter Headless Next JS Starter Template](https://cdn.getshifter.co/6979d2c20e0f14c46f6b6eac8659c6136a0b4a67/uploads/2023/03/1-1024x626.png)
 
 This is a starter template for building headless WordPress websites using Next.js and Shifter. It provides a solid foundation for creating fast, scalable, and SEO-friendly websites with a decoupled frontend and WordPress as a headless CMS.
@@ -30,6 +32,44 @@ To get started with the Shifter Headless Next JS Starter Template, follow these 
 The following configuration options are available in the `.env` file:
 
 - `WORDPRESS_URL`: The URL of your headless WordPress site's API endpoint.
+
+## Usage
+
+The Shifter Headless Next JS Starter Template provides a set of convenient commands that you can use to develop, build, and deploy your Next.js website or application. Here's a breakdown of the available commands:
+
+```json
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "npx serve@latest out"
+}
+```
+
+- **dev**: This command starts the Next.js development server, enabling hot module reloading for automatic updates in the browser as you make changes to your website or application. Use the following command to run the development server:
+
+  ```shell
+  npm run dev
+  ```
+
+- **build**: The build command compiles your Next.js website or application into an optimized and production-ready bundle. It performs various optimizations, such as code minification and static file generation. To build your website or application, run the following command:
+
+  ```shell
+  npm run build
+  ```
+
+  After running the build command, a new `out` directory will be created in the root of your project. This directory contains the compiled output of your website or application, ready to be deployed.
+
+- **start**: The start command serves the compiled Next.js website or application using the `serve` package. It serves the content from the `out` directory created during the build process. This command is useful when you want to preview your production-ready website or application locally. To start the server, run the following command:
+
+  ```shell
+  npm start
+  ```
+
+  By default, the server will be accessible at `http://localhost:3000`, unless you modify the port configuration in your code.
+
+Feel free to use and modify these commands to fit your specific requirements. They provide a convenient way to manage the development and deployment lifecycle of your Next.js website or application based on the Shifter Headless Next JS Starter Template.
+
+Please note that the `npm` commands mentioned above can be replaced with `yarn` if you prefer using Yarn as your package manager.
 
 ## Contributing
 
