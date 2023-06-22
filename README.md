@@ -1,5 +1,7 @@
 # Shifter Headless Next JS Starter Template
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3bb22d60-9c6e-49c1-8885-b7673506f8c2/deploy-status)](https://app.netlify.com/sites/musical-mermaid-f30aba/deploys)
+
 [![ja](https://img.shields.io/badge/lang-ja-red.svg)](https://github.com/getshifter/shifter-headless-nextjs-typescript/blob/main/README.ja.md)
 
 ![Shifter Headless Next JS Starter Template](https://cdn.getshifter.co/6979d2c20e0f14c46f6b6eac8659c6136a0b4a67/uploads/2023/03/1-1024x626.png)

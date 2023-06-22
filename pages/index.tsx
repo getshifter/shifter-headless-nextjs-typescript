@@ -18,7 +18,11 @@ export const Home: FC<{
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Shifter Headless Next JS TypeScript</title>
+        <meta
+          name="description"
+          content="Shifter Headless Next JS Starter Template: A solid foundation for fast, scalable, and SEO-friendly headless WordPress websites with Next.js and Shifter."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Archives posts={posts} />

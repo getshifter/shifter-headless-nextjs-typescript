@@ -112,7 +112,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         slug: decodeURI(post.slug),
       },
     })),
-    fallback: canUseServerSideFeatures() ? "blocking" : false,
+    fallback: false,
   };
 };
 
