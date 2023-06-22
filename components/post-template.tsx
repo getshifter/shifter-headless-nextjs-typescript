@@ -5,6 +5,7 @@ import {
   getThePostAuthor,
 } from "../libs/wpapi/format";
 import { WPPost } from "../libs/wpapi/interfaces";
+import Link from "next/link";
 
 export const PostTemplate = (post: WPPost) => {
   const featuredImage = getThePostFeatureImage(post, "large");
@@ -19,7 +20,6 @@ export const PostTemplate = (post: WPPost) => {
       key={post.id}
       className="relative isolate flex flex-col gap-8 lg:flex-row"
     >
-      {/* {JSON.stringify(post)} */}
       <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
         {featuredImage ? (
           <img
@@ -55,10 +55,9 @@ export const PostTemplate = (post: WPPost) => {
         </div>
         <div className="group relative max-w-xl">
           <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 dark:text-gray-100 group-hover:text-gray-600 dark:group-hover:text-gray-300">
-            <a href={decodeURI(post.slug)}>
-              <span className="absolute inset-0" />
+            <Link href={decodeURI(post.slug)}>
               {post.title.rendered}
-            </a>
+            </Link>
           </h3>
           <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
         </div>
