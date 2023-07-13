@@ -16,6 +16,8 @@ This is a starter template for building headless WordPress websites using Next.j
 - Shifter: Seamless integration with Shifter, a serverless WordPress hosting and deployment platform.
 - Scalable architecture: Easily scale your website as your content grows and traffic increases.
 
+[Live Demo](https://shifter-headless-nextjs-typescript.netlify.app)
+
 ## Getting Started
 
 To get started with the Shifter Headless Next JS Starter Template, follow these steps:
